@@ -86,9 +86,9 @@ Given this data, we could anticipate building an idex with the following schema:
 
 ```
 
-There's a lot going on here, so let's focus on the key points. The mappings describe a new type of document (books). Books contain three properties: author, title and content. All three are of type string. Two are not analyzed and one uses a custom analyzer. The analyzer tells lucene how a given field should be tokenized and indexed. In this case, full_name_analyzer tokenizes using the custom full_name_tokenizer. This custom tokenizer is of type "witespace", i.e., tokenize on whitespace. The custom analyzer also defines filters such as lowercasing tokens, unicode normalization and much more.
+There's a lot going on here, so let's focus on the key points. The mappings describe a new type of document (books). Books contain three properties: author, title and content. All three are of type string. Two are not analyzed and one uses a custom analyzer. The analyzer tells lucene how a given field should be tokenized and indexed. In this case, full_name_analyzer tokenizes using the custom full_name_tokenizer. This custom tokenizer is of type "whitespace", i.e., tokenize on whitespace. The custom analyzer also defines filters such as lowercasing tokens, unicode normalization and much more.
 
-To construct an index, library, all we need to do is save the above schema as a json and run the following code (from within src directory):
+To construct an index named "library", all we need to do is save the above schema as a json and run the following code (from within src directory):
 
 ```
 >> curl -XPUT http://localhost:9200/library -d '@schema.json'
