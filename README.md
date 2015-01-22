@@ -47,7 +47,7 @@ To build an index, let's first define the type of data we expect to encounter. L
 }
 ```
 
-Given this data, we could anticipate building an idex with the following schema:
+Given this data, we could anticipate building an index with the following schema:
 
 ```
 {
